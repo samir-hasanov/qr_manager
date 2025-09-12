@@ -23,6 +23,8 @@ public class QrUserController {
 
     private final QrUserServiceImpl userService;
 
+
+// kubernetes k8s
     @PostMapping("/add")
     public ResponseEntity<byte[]> addQrUser(@RequestBody ReqQrUser reqQrUser) throws WriterException, IOException {
        return (userService.addQrUser(reqQrUser));
