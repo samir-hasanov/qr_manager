@@ -71,6 +71,12 @@ public class QrUserController {
     }
 
 
+    @GetMapping("/test")
+    public String test(){
+        return "Hello World";
+    }
+
+
 
 
 }
