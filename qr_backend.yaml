@@ -43,4 +43,4 @@ spec:
     app: qr-manager
   ports:
     - port: 8085
-      targetPort: 8085
+      targetPort: 8085 //
