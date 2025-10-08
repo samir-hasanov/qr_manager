@@ -9,4 +9,4 @@ spec:
   ports:
     - port: 8085
       targetPort: 8085
-      nodePort: 30085   # 30000-32767 aralığında olmalıdır
+      nodePort: 30090   # 30000-32767 aralığında olmalıdır
