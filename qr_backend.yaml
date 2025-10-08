@@ -38,9 +38,10 @@ kind: Service
 metadata:
   name: qr-manager
 spec:
-  type: ClusterIP
   selector:
     app: qr-manager
   ports:
-    - port: 8085
-      targetPort: 8085 //
+    - protocol: TCP
+      port: 8085
+      targetPort: 8085
+  type: ClusterIP
