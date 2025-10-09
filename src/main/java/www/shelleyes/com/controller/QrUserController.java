@@ -16,7 +16,7 @@ import java.util.List;
 
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "http://localhost:49246")
 @RequiredArgsConstructor
 @RequestMapping("/api/v1/qr")
 public class QrUserController {
