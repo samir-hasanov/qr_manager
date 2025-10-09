@@ -15,6 +15,7 @@ spec:
       containers:
         - name: qr-manager
           image: samirhasanov/qr_manager:latest   # 👉 öz Docker Hub image-nin adı ilə əvəz et
+          imagePullPolicy: Always
           ports:
             - containerPort: 8085
           env:
