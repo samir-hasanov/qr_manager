@@ -2,6 +2,8 @@ package www.shelleyes.com.controller;
 
 import com.google.zxing.WriterException;
 import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,9 +24,11 @@ import java.util.List;
 public class QrUserController {
 
     private final QrUserServiceImpl userService;
+    private static final Logger log = LoggerFactory.getLogger(QrUserController.class);
 
 
-// kubernetes k8s
+
+    // kubernetes k8s
     @PostMapping("/add")
     public ResponseEntity<byte[]> addQrUser(@RequestBody ReqQrUser reqQrUser) throws WriterException, IOException {
        return (userService.addQrUser(reqQrUser));
@@ -71,8 +75,10 @@ public class QrUserController {
     }
 
 
+
     @GetMapping("/test")
     public String test(){
+        log.info("Test endpoint called");
         return "Hello World";
     }
 
